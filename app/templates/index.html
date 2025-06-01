@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Revelar Noticias</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>📰 Revelar Noticias</h1>
+  <button onclick="scrapear()">Actualizar noticias</button>
+  <ul id="lista">
+    {% for n in noticias %}
+      <li>
+        <a href="{{ n[1] }}" target="_blank">{{ n[0] }}</a>
+        <small>{{ n[2] }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+  <script src="/static/script.js"></script>
+</body>
+</html>
